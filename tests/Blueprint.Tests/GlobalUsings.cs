@@ -1,0 +1,11 @@
+global using Blueprint.Framework.Api;
+global using Blueprint.Framework.Components;
+global using Blueprint.Framework.Constants;
+global using Blueprint.Framework.Models;
+global using Blueprint.Framework.Pages;
+global using Blueprint.Framework.TestData;
+global using Blueprint.Framework.TestData.Factories;
+global using Blueprint.Framework.Utilities;
+global using Blueprint.Tests.Infrastructure;
+global using Microsoft.Playwright;
+global using NUnit.Framework;

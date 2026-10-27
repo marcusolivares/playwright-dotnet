@@ -1,0 +1,21 @@
+# Build output
+bin/
+obj/
+
+# IDEs
+.vs/
+.idea/
+*.user
+*.suo
+.vscode/*
+!.vscode/extensions.json
+
+# Test output
+TestResults/
+*.trx
+playwright-artifacts/
+
+# Local configuration and secrets
+appsettings.local.json
+playwright/.auth/
+.env

@@ -1,0 +1,23 @@
+[
+  {
+    "description": "missing e-mail",
+    "email": "",
+    "password": "Secret123!",
+    "field": "email",
+    "expectedError": "Email is required"
+  },
+  {
+    "description": "malformed e-mail",
+    "email": "not-an-email",
+    "password": "Secret123!",
+    "field": "email",
+    "expectedError": "Email format is invalid"
+  },
+  {
+    "description": "missing password",
+    "email": "someone@example.com",
+    "password": "",
+    "field": "password",
+    "expectedError": "Password is required"
+  }
+]
