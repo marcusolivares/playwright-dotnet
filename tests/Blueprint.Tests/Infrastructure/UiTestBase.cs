@@ -36,7 +36,7 @@ public abstract class UiTestBase : BrowserTest
         Playwright.Selectors.SetTestIdAttribute(Settings.TestIdAttribute);
 
         Api = await ApiClient.CreateAsync(Playwright, Settings.ApiUrl, await ApiCredentialsAsync());
-        Context = await NewContextAsync(await CreateContextOptionsAsync());
+        Context = await Browser.NewContextAsync(await CreateContextOptionsAsync());
 
         if (Settings.Artifacts.TraceOnFailure)
         {

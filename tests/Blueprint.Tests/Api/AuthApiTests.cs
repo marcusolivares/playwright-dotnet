@@ -30,7 +30,7 @@ public sealed class AuthApiTests : ApiTestBase
 
         var response = await Api.Auth.RegisterAsync(existingUser);
 
-        Assert.That(response.StatusCode, Is.EqualTo(422), response.Content);
+        Assert.That(response.StatusCode, Is.EqualTo(409), response.Content);
     }
 
     [Test]

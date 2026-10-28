@@ -20,7 +20,9 @@ public sealed class HomePage(IPage page) : BasePage(page)
 
     public ILocator NoResults { get; } = page.GetByTestId("no-results");
 
-    protected override ILocator ReadyIndicator => SearchInput;
+    // The initial product list, not the search box: the app renders whichever product response arrives last,
+    // so searching before the initial list has loaded can leave the unfiltered products on screen.
+    protected override ILocator ReadyIndicator => ProductNames.First;
 
     public Task GotoAsync() => NavigateAsync(Routes.Home);
 

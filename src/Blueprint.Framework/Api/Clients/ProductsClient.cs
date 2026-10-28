@@ -14,7 +14,7 @@ public sealed class ProductsClient(IAPIRequestContext request) : ResourceClient(
     {
         var products = (await SearchAsync(query)).EnsureSuccess().Data.Items;
 
-        return products.FirstOrDefault(product => product.Stock is null or > 0)
+        return products.FirstOrDefault(product => product.InStock)
             ?? throw new ApiException($"No product in stock matches '{query}'.");
     }
 }
